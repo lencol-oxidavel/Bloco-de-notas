@@ -55,27 +55,38 @@ def abrir_banco_de_dados():
             
             lista_notas = Listbox(escolha)
             for nota in notas:
-                lista_notas.insert(END, nota)
+                lista_notas.insert(END, nota[0])  # Ajuste aqui para inserir apenas o nome da nota
             lista_notas.pack()
             
+
+            def deletar_nota():
+                nome_nota = lista_notas.get(ACTIVE)
+                if nome_nota:
+                    cursor.execute("DELETE FROM notas WHERE nome = %s", (nome_nota,))
+                    conexao.commit()
+                    print("Nota deletada com sucesso!")
+                    lista_notas.delete(ACTIVE)
+                else:
+                    print("Nenhuma nota selecionada.")
+
+
             def carregar_nota():
                 nome_nota = lista_notas.get(ACTIVE)
                 if nome_nota:
-                    nome_nota = nome_nota
-                    cursor.execute("SELECT content FROM notas WHERE nome = %s", (nome_nota)) # (nome_nota,)) removi a virgula o que me permitiu de alguma forma que eu carregasse a nota no widget de texto
+                    cursor.execute("SELECT content FROM notas WHERE nome = %s", (nome_nota,))
                     conteudo = cursor.fetchone()
                     
                     if conteudo:
-                        conteudo_limpo = conteudo[1:-1] # limpa o texto do primeiro e ultimo caracteres mas não funciona
                         texto.delete("1.0", END)
-                        texto.insert(END, conteudo_limpo)
+                        texto.insert(END, conteudo[0])
                         print("Nota carregada com sucesso!")
                     else:
                         print("Erro ao carregar a nota.")
                 
                 escolha.destroy()
                 
-            
+            botao_deletar = Button(escolha, text="Deletar Nota", command=deletar_nota)
+            botao_deletar.pack()
             botao_carregar = Button(escolha, text="Carregar Nota", command=carregar_nota)
             botao_carregar.pack()
             
@@ -85,6 +96,7 @@ def abrir_banco_de_dados():
             
     except mysql.connector.Error as err:
         print("Erro: {}".format(err))
+
         
 
 def salvar_banco_de_dados():
