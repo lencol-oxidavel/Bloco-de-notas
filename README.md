@@ -9,11 +9,13 @@
 **[linnguagens ]**
 
 ## Integrantes:
-| Nome          | GitHub                                                             | Contato
-| Marcelo       | [github.com/lencol-oxidavel](https://github.com/lencol-oxidavel/)  | [marcelocpadilha51@gmail.com]
-| Emanuel       | [github.com/Expert0ne](https://github.com/Expert0ne)               | [emanuelgomes011@gmail.com]
-| Pedro         | [github.com/PedroHenriquePR](https://github.com/PedroHenriquePR)   | [h3enr1quepedr011@gmail.com]
-| Vinicius      | [github.com/VinnyOnline](https://github.com/VinnyOnline)           | [viniciusjeffman@gmail.com]
+| Nome               | Github       | Contato                         |
+|--------------------|-----------|-----------------------------------|
+| Marcelo  | [github.com/lencol-oxidavel](https://github.com/lencol-oxidavel/) | [marcelocpadilha51@gmail.com] |
+| Emanuel             | [github.com/Expert0ne](https://github.com/Expert0ne) | [emanuelgomes011@gmail.com]                        |
+| Pedro              | [github.com/PedroHenriquePR](https://github.com/PedroHenriquePR) | [h3enr1quepedr011@gmail.com]                     |
+| Vinicius        | [github.com/VinnyOnline](https://github.com/VinnyOnline) | [viniciusjeffman@gmail.com]                            |
+
 
 ## Descrição resumida do projeto
 Este projeto visa [Salvar notas de forma que mesmo que perca o hardware possam ser acessadas em outros hardwares]
