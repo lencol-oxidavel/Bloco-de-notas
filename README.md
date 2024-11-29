@@ -6,7 +6,7 @@
 **[O tema do nosso projeto é salvar e carregar notas no banco de dados]**
 
 ### Área do Projeto:
-**[linnguagens ]**
+**[linguagens]**
 
 ## Integrantes:
 | Nome               | Github       | Contato                         |
